@@ -1,2 +1,1 @@
-# MyFirstProg
- My first programm
+# My first programm

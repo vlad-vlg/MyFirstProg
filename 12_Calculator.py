@@ -1,9 +1,17 @@
+import tkinter as tk
 
 
-def main(args):
-    return 0
+window = tk.Tk()
+window.geometry('300x200')
+window.title('Python калькулятор')
 
-if __name__ == '__main__':
-    import sys
-    sys.exit(main(sys.args))
+window.mainloop()
+
+
+# def main(args):
+#     return 0
+
+# if __name__ == '__main__':
+#     import sys
+#       sys.exit(main(sys.args))
 

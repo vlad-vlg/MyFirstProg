@@ -3,6 +3,22 @@
 import tkinter as tk
 
 
+def get_sum():
+    a = int(first_entry.get())
+    b = int(second_entry.get())
+    result_label['text'] = a + b
+
+def get_subtrac():
+    a = int(first_entry.get())
+    b = int(second_entry.get())
+    result_label['text'] = a - b
+
+def get_mult():
+    a = int(first_entry.get())
+    b = int(second_entry.get())
+    result_label['text'] = a * b
+
+
 window = tk.Tk()
 window.geometry('300x200')
 window.title('Python калькулятор')
@@ -21,19 +37,11 @@ second_entry.grid(column=1, row=1)
 result_label = tk.Label(text='', relief='sunken', bg='azure')
 result_label.grid(column=1, row=2, sticky='ew')
 
-def get_sum():
-    a = int(first_entry.get())
-    b = int(second_entry.get())
-    result_label['text'] = a + b
-
-def get_mult():
-    a = int(first_entry.get())
-    b = int(second_entry.get())
-    result_label['text'] = a * b    
-
 button = tk.Button(window, text='+', command=get_sum, width='3')
 button.grid(column=1, row=3, sticky='w')
+button = tk.Button(window, text='-', command=get_subtrac, width='3')
+button.grid(column=1, row=3)
 button = tk.Button(window, text='*', command=get_mult, width='3')
-button.grid(column=1, row=3) 
+button.grid(column=1, row=3, sticky='e') 
 
 window.mainloop()

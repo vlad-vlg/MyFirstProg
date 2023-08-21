@@ -26,9 +26,14 @@ def get_sum():
     b = int(second_entry.get())
     result_label['text'] = a + b
 
+def get_mult():
+    a = int(first_entry.get())
+    b = int(second_entry.get())
+    result_label['text'] = a * b    
+
 button = tk.Button(window, text='+', command=get_sum)
 button.grid(column=1, row=3, sticky='w')
-button = tk.Button(window, text='*')
+button = tk.Button(window, text='*', command=get_mult)
 button.grid(column=1, row=3)
 
 window.mainloop()

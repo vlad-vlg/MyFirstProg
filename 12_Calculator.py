@@ -26,7 +26,9 @@ def get_sum():
     b = int(second_entry.get())
     result_label['text'] = a + b
 
-button = tk.Button(window, text='Вычислить сумму', command=get_sum)
+button = tk.Button(window, text='+', command=get_sum)
+button.grid(column=1, row=3, sticky='w')
+button = tk.Button(window, text='*')
 button.grid(column=1, row=3)
 
 window.mainloop()

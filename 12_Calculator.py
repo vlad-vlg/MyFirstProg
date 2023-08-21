@@ -18,8 +18,8 @@ first_entry = tk.Entry()
 first_entry.grid(column=1, row=0)
 second_entry = tk.Entry()
 second_entry.grid(column=1, row=1)
-result_label = tk.Label(text='')
-result_label.grid(column=1, row=2, sticky='w')
+result_label = tk.Label(text='', relief='sunken', bg='azure')
+result_label.grid(column=1, row=2, sticky='ew')
 
 def get_sum():
     a = int(first_entry.get())
@@ -31,9 +31,9 @@ def get_mult():
     b = int(second_entry.get())
     result_label['text'] = a * b    
 
-button = tk.Button(window, text='+', command=get_sum)
+button = tk.Button(window, text='+', command=get_sum, width='3')
 button.grid(column=1, row=3, sticky='w')
-button = tk.Button(window, text='*', command=get_mult)
-button.grid(column=1, row=3)
+button = tk.Button(window, text='*', command=get_mult, width='3')
+button.grid(column=1, row=3) 
 
 window.mainloop()

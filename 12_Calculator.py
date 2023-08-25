@@ -28,7 +28,7 @@ def get_div():
 
 
 window = tk.Tk()
-window.geometry('300x200')
+window.geometry('300x200+400+300')
 window.title('Python калькулятор')
 
 first = tk.Label(text='Первое число')
@@ -42,7 +42,7 @@ first_entry = tk.Entry(justify='right')
 first_entry.grid(column=1, row=0, columnspan=4)
 second_entry = tk.Entry(justify='right')
 second_entry.grid(column=1, row=1, columnspan=4)
-result_label = tk.Label(text='', relief='sunken', bg='azure')
+result_label = tk.Label(text='', anchor='e', relief='sunken', bg='azure')
 result_label.grid(column=1, row=2, columnspan=4, sticky='ew')
 
 button = tk.Button(window, text='+', command=get_sum, width='3', activebackground='azure2')
